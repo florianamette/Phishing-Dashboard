@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples Pages Web avec Iframes</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+        iframe {
+            width: calc(100vw - 2px); /* 2 iframes par ligne */
+            height: calc((1080 / 1920) * (100vw - 2px)); /* Maintient le ratio 1080x1920 */
+            border: 1px solid #333; /* Bordures fines pour simuler un cadre de caméra */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenu généré dynamiquement ici -->
+    <script>
+        // Liste de liens directement intégrée dans le fichier HTML
+        const links = [
+            "https://rn0ude.github.io/phishing_chal/",
+            "https://dl-maker.github.io/Kernel/",
+            "https://huskago.github.io/oteria-kernel-is-amazing/",
+            "https://patrick-4505.github.io/learn-phishing/main.html",
+            "https://youngsa253.github.io/phishing/",
+            "https://pwned841.github.io/phising/",
+            "https://thisisnnn.github.io/site/",
+            "https://prometeu1.github.io/myfirsttime/",
+            "https://iliaslr.github.io/OteriaTest/",
+            "https://4d4j.github.io/fishing_oteria/",
+    
+        ];
+
+        // Fonction pour créer des iframes à partir des URLs
+        function createIframes(urls) {
+            const body = document.body;
+
+            urls.forEach(url => {
+                const iframe = document.createElement('iframe');
+                iframe.src = url;
+                iframe.title = `Iframe for ${url}`;
+                body.appendChild(iframe);
+            });
+        }
+
+        // Appeler la fonction pour créer les iframes au chargement de la page
+        window.onload = () => createIframes(links);
+    </script>
+</body>
+</html>
